@@ -19,7 +19,7 @@ test {
 }
 
 application{
-    application = 'com.example.Main'
+    mainClass = 'com.example.Main'
 }
 
 task copyWebsite(type: Copy){
