@@ -1,0 +1,28 @@
+plugins {
+    id 'application'
+}
+
+group = 'com.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application{
+    application = 'com.example.Main'
+}
+
+task copyWebsite(type: Copy){
+    from 'java/com/example/Main.java'
+    into 'docs'
+}
